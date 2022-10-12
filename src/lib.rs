@@ -10,6 +10,7 @@ async fn health_check() -> HttpResponse {
 }
 
 
+#[allow(dead_code)]  // used implicitly by web::Form<FormData> in subscribe
 #[derive(serde::Deserialize)]
 struct FormData {
     email: String,
